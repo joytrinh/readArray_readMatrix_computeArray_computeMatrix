@@ -11,10 +11,10 @@ namespace LTDT_BTTuan00_1
     {
         static void Main(string[] args)
         {
-            string input_filename = args[0];
-            readArray(input_filename);
+            readMatrix(args[0]);
+            Console.ReadLine();
         }
-        private static void readArray(string input_filename)
+        private static void readMatrix(string input_filename)
         {
             try
             {
@@ -22,16 +22,28 @@ namespace LTDT_BTTuan00_1
                 {
                     string line = sr.ReadLine();
                     int N = int.Parse(line);
-                    int[] arr = new int[N];
-                    int i;
-                    line = sr.ReadLine();
+                    int[,] arr = new int[N, N];
+                    int rowIndex, colIndex;
+                    int sIndex = 0;
+                    line = sr.ReadToEnd().Replace("\r\n", " ");
                     string[] s = line.Split(' ');
-                    for (i = 0; i < N; i++)
-                        arr[i] = int.Parse(s[i]);
+                    while (sIndex < N * 2)
+                    {
+                        for (rowIndex = 0; rowIndex < N; rowIndex++)
+                            for (colIndex = 0; colIndex < N; colIndex++)
+                                {
+                                    arr[rowIndex, colIndex] = int.Parse(s[sIndex]);
+                                    sIndex++;
+                                }
+                    }
                     sr.Close();
                     Console.WriteLine(N);
-                    for (i = N - 1; i >= 0; i--)
-                        Console.Write(arr[i] + " ");
+                    for (colIndex = 0; colIndex < N; colIndex++)
+                    {
+                        for (rowIndex = 0; rowIndex < N; rowIndex++)
+                            Console.Write(arr[rowIndex, colIndex] + " ");
+                        Console.WriteLine();
+                    }
                     Console.WriteLine();
                 }
             }
@@ -40,6 +52,6 @@ namespace LTDT_BTTuan00_1
                 Console.WriteLine("The file could not be read: ");
                 Console.WriteLine(e.Message);
             }
-        }        
+        }
     }
 }
