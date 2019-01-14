@@ -11,7 +11,7 @@ namespace LTDT_BTTuan00_1
     {
         static void Main(string[] args)
         {
-            computeMatrix("inputMatrix.txt", "outputMatrix.txt");
+            computeMatrix(args[0], args[1]);
             Console.ReadLine();
         }
         private static void computeMatrix(string input_filename, string output_filename)
