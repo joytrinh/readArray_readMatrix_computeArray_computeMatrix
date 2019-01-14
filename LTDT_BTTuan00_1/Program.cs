@@ -40,24 +40,6 @@ namespace LTDT_BTTuan00_1
                 Console.WriteLine("The file could not be read: ");
                 Console.WriteLine(e.Message);
             }
-        }
-        private static void readMatrix(string input_filename)
-        {
-            try
-            {
-                using (StreamReader reader = new StreamReader(input_filename))
-                {
-                    string line = reader.ReadLine();
-                    int N = int.Parse(line);
-                    int[] arr = new int[N];
-                    
-                }
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
+        }        
     }
 }
