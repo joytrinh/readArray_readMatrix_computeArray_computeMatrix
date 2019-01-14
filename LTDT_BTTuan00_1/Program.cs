@@ -11,10 +11,10 @@ namespace LTDT_BTTuan00_1
     {
         static void Main(string[] args)
         {
-            readMatrix(args[0]);
+            computeArray(args[0],args[1]);
             Console.ReadLine();
         }
-        private static void readMatrix(string input_filename)
+        private static void computeArray(string input_filename, string output_filename)
         {
             try
             {
@@ -22,29 +22,30 @@ namespace LTDT_BTTuan00_1
                 {
                     string line = sr.ReadLine();
                     int N = int.Parse(line);
-                    int[,] arr = new int[N, N];
-                    int rowIndex, colIndex;
-                    int sIndex = 0;
-                    line = sr.ReadToEnd().Replace("\r\n", " ");
+                    int[] arr = new int[N];
+                    int i;
+                    line = sr.ReadLine();
                     string[] s = line.Split(' ');
-                    while (sIndex < N * 2)
-                    {
-                        for (rowIndex = 0; rowIndex < N; rowIndex++)
-                            for (colIndex = 0; colIndex < N; colIndex++)
-                                {
-                                    arr[rowIndex, colIndex] = int.Parse(s[sIndex]);
-                                    sIndex++;
-                                }
-                    }
+                    for (i = 0; i < N; i++)
+                        arr[i] = int.Parse(s[i]);
                     sr.Close();
-                    Console.WriteLine(N);
-                    for (colIndex = 0; colIndex < N; colIndex++)
+                    using (StreamWriter writer = new StreamWriter(output_filename))
                     {
-                        for (rowIndex = 0; rowIndex < N; rowIndex++)
-                            Console.Write(arr[rowIndex, colIndex] + " ");
-                        Console.WriteLine();
-                    }
-                    Console.WriteLine();
+                        int sumEvenNumbers = 0;
+                        int multiplyOddNumbers = 1;
+                        writer.WriteLine(N);
+                        for (i = N - 1; i >= 0; i--)
+                        {
+                            writer.Write(arr[i] + " ");
+                            if (arr[i] % 2 == 0)
+                                sumEvenNumbers += arr[i];
+                            else
+                                multiplyOddNumbers *= arr[i];
+                        }
+                        writer.WriteLine();
+                        writer.WriteLine(sumEvenNumbers);
+                        writer.WriteLine(multiplyOddNumbers);
+                    }                    
                 }
             }
             catch (Exception e)
