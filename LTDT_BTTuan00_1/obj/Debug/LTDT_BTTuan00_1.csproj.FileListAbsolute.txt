@@ -1,0 +1,14 @@
+E:\STUDY\IT\Semester 3\T5.2 PTTKPM\Program\LTDT_BTTuan00_1\LTDT_BTTuan00_1\bin\Debug\LTDT_BTTuan00_1.exe.config
+E:\STUDY\IT\Semester 3\T5.2 PTTKPM\Program\LTDT_BTTuan00_1\LTDT_BTTuan00_1\bin\Debug\LTDT_BTTuan00_1.exe
+E:\STUDY\IT\Semester 3\T5.2 PTTKPM\Program\LTDT_BTTuan00_1\LTDT_BTTuan00_1\bin\Debug\LTDT_BTTuan00_1.pdb
+E:\STUDY\IT\Semester 3\T5.2 PTTKPM\Program\LTDT_BTTuan00_1\LTDT_BTTuan00_1\obj\Debug\LTDT_BTTuan00_1.csprojAssemblyReference.cache
+E:\STUDY\IT\Semester 3\T5.2 PTTKPM\Program\LTDT_BTTuan00_1\LTDT_BTTuan00_1\obj\Debug\LTDT_BTTuan00_1.csproj.CoreCompileInputs.cache
+E:\STUDY\IT\Semester 3\T5.2 PTTKPM\Program\LTDT_BTTuan00_1\LTDT_BTTuan00_1\obj\Debug\LTDT_BTTuan00_1.exe
+E:\STUDY\IT\Semester 3\T5.2 PTTKPM\Program\LTDT_BTTuan00_1\LTDT_BTTuan00_1\obj\Debug\LTDT_BTTuan00_1.pdb
+E:\STUDY\IT\Semester 3\T3. Lý thuyết đồ thị\Projects\LTDT_BTTuan00_1\LTDT_BTTuan00_1\bin\Debug\LTDT_BTTuan00_1.exe.config
+E:\STUDY\IT\Semester 3\T3. Lý thuyết đồ thị\Projects\LTDT_BTTuan00_1\LTDT_BTTuan00_1\bin\Debug\LTDT_BTTuan00_1.exe
+E:\STUDY\IT\Semester 3\T3. Lý thuyết đồ thị\Projects\LTDT_BTTuan00_1\LTDT_BTTuan00_1\bin\Debug\LTDT_BTTuan00_1.pdb
+E:\STUDY\IT\Semester 3\T3. Lý thuyết đồ thị\Projects\LTDT_BTTuan00_1\LTDT_BTTuan00_1\obj\Debug\LTDT_BTTuan00_1.csprojAssemblyReference.cache
+E:\STUDY\IT\Semester 3\T3. Lý thuyết đồ thị\Projects\LTDT_BTTuan00_1\LTDT_BTTuan00_1\obj\Debug\LTDT_BTTuan00_1.csproj.CoreCompileInputs.cache
+E:\STUDY\IT\Semester 3\T3. Lý thuyết đồ thị\Projects\LTDT_BTTuan00_1\LTDT_BTTuan00_1\obj\Debug\LTDT_BTTuan00_1.exe
+E:\STUDY\IT\Semester 3\T3. Lý thuyết đồ thị\Projects\LTDT_BTTuan00_1\LTDT_BTTuan00_1\obj\Debug\LTDT_BTTuan00_1.pdb
