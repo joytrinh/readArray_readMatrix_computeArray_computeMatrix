@@ -11,10 +11,10 @@ namespace LTDT_BTTuan00_1
     {
         static void Main(string[] args)
         {
-            computeArray(args[0],args[1]);
+            computeMatrix("inputMatrix.txt", "outputMatrix.txt");
             Console.ReadLine();
         }
-        private static void computeArray(string input_filename, string output_filename)
+        private static void computeMatrix(string input_filename, string output_filename)
         {
             try
             {
@@ -22,30 +22,41 @@ namespace LTDT_BTTuan00_1
                 {
                     string line = sr.ReadLine();
                     int N = int.Parse(line);
-                    int[] arr = new int[N];
-                    int i;
-                    line = sr.ReadLine();
+                    int[,] arr = new int[N, N];
+                    int rowIndex, colIndex;
+                    int sIndex = 0;
+                    line = sr.ReadToEnd().Replace("\r\n", " ");
                     string[] s = line.Split(' ');
-                    for (i = 0; i < N; i++)
-                        arr[i] = int.Parse(s[i]);
+                    while (sIndex < N * 2)
+                    {
+                        for (rowIndex = 0; rowIndex < N; rowIndex++)
+                            for (colIndex = 0; colIndex < N; colIndex++)
+                            {
+                                arr[rowIndex, colIndex] = int.Parse(s[sIndex]);
+                                sIndex++;
+                            }
+                    }
                     sr.Close();
                     using (StreamWriter writer = new StreamWriter(output_filename))
                     {
-                        int sumEvenNumbers = 0;
-                        int multiplyOddNumbers = 1;
                         writer.WriteLine(N);
-                        for (i = N - 1; i >= 0; i--)
+                        for (colIndex = 0; colIndex < N; colIndex++)
                         {
-                            writer.Write(arr[i] + " ");
-                            if (arr[i] % 2 == 0)
-                                sumEvenNumbers += arr[i];
-                            else
-                                multiplyOddNumbers *= arr[i];
+                            for (rowIndex = 0; rowIndex < N; rowIndex++)
+                                writer.Write(arr[rowIndex, colIndex] + " ");
+                            writer.WriteLine();
+                        }
+                        for (colIndex = 0; colIndex < N; colIndex++)
+                        {
+                            for (rowIndex = 0; rowIndex < N; rowIndex++)
+                                if (colIndex == rowIndex)
+                                    writer.Write(arr[rowIndex, colIndex] + " ");
                         }
                         writer.WriteLine();
-                        writer.WriteLine(sumEvenNumbers);
-                        writer.WriteLine(multiplyOddNumbers);
-                    }                    
+                        writer.WriteLine("This is an Asymmetric matrix");
+                        //Because we add a new line after a Symmetric matrix,
+                        //so we always have a new Asymmetric matrix 
+                    }
                 }
             }
             catch (Exception e)
