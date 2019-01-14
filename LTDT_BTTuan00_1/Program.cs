@@ -11,8 +11,7 @@ namespace LTDT_BTTuan00_1
     {
         static void Main(string[] args)
         {
-            string input_filename = args[0];
-            readArray(input_filename);
+            readArray(args[0]);
         }
         private static void readArray(string input_filename)
         {
